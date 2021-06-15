@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <!-- Home Screen -->
+    <div id="home-container">
+      <h1>Welcome to tic-tac-toe</h1>
+      <div class="info-container">
+        <div class="info-box">
+          <h4>Player 1</h4>
+          <ul>
+            <li>Name: <input id="p1name" type="text" value="Player1" data-player="1" maxlength="9" name="name" /></li>
+            <li>Symbol: <input id="p1symbol" type="text" value="X" maxlength="1" data-player="1" name="symbol" /></li>
+            <li>
+              Type:
+              <select name="p1type" id="p1type" data-player="1" name="type">
+                <option value="human">Human</option>
+                <option value="cpu">CPU</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h4>Player 2</h4>
+          <ul>
+            <li>Name: <input id="p2name" type="text" value="Player2" maxlength="9" data-player="2" name="name" /></li>
+            <li>Symbol: <input id="p2symbol" type="text" value="O" maxlength="1" data-player="2" name="symbol" /></li>
+            <li>
+              Type:
+              <select name="p2type" id="p2type" data-player="2" name="type">
+                <option value="human">Human</option>
+                <option value="cpu" selected>CPU</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button id="start">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container">
+      <button id="quit-btn">Quit Game</button>
+      <div class="current-turn">
+        <span>Turn:</span>
+        <span>Player1</span>
+      </div>
+      <div id="gameboard">
+        <!-- Where the grid is inserted -->
+      </div>
+    </div>
+
+    <!-- Game Complete Screen -->
+    <div id="reset-container">
+      <div id="reset-msg">Message to the winner!</div>
+      <button id="play-again-btn">Play Again</button>
+      <button id="home-screen-btn">Home Screen</button>
+    </div>
+
+    <!-- Msg Box -->
+    <div class="msg-box">
+      <div class="msg">The game is afoot!</div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
